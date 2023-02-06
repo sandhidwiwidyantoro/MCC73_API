@@ -117,10 +117,10 @@ public class AccountRepositories : GeneralRepository<MyContext, Account, string>
 
         if (empCount == null)
         {
-            return "x1111";
+            return "11111";
         }
         string NIK = empCount.NIK.Substring(1, 4);
-        return Convert.ToString("x" + (Convert.ToInt32(NIK) + 1));
+        return Convert.ToString("1" + (Convert.ToInt32(NIK) + 1));
     }
 
     public List<string> UserRoles(string email)

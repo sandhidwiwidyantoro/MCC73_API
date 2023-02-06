@@ -1,0 +1,100 @@
+﻿@{
+    Layout = "_LayoutAdmin";
+}
+
+<div class="col-12">
+    <div class="card mb-4">
+        <div class="card-header pb-0">
+            <center>
+                <strong><h3 class="bg-primary text-white">List Employee</h3></strong>
+            </center>
+            <!-- Button trigger modal -->
+            <div class="mt-5" style="margin-bottom: -30px">
+                <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modalInsert">
+                    Insert
+                </button>
+            </div>
+        </div>
+        <div class="card-body px-0 pt-0 pb-">
+            <div class="table-responsive p-4">
+                <table id="employee" class="table align-items-center justify-content-center mb-0">
+                    <thead>
+                        <tr>
+                            <th class="text-uppercase text-black-50">No</th>
+                            <th class="text-uppercase text-black-50">NIK</th>
+                            <th class="text-uppercase text-black-50">First_name</th>
+                            <th class="text-uppercase text-black-50">Last_name</th>
+                            <th class="text-uppercase text-black-50">Phone</th>
+                            <th class="text-uppercase text-black-50">birthDate</th>
+                            <th class="text-uppercase text-black-50">Salary</th>
+                            <th class="text-uppercase text-black-50">Email</th>
+                            <th class="text-uppercase text-black-50">Gender</th>
+                            <th class="text-uppercase text-black-50">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="modalInsert" tabindex="-1" aria-labelledby="modalInsert" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="namaHeader">Insert Data</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="formValidation" action="" method="post">
+                    <div class="mb-3">
+                        <label for="inputNIK" class="form-label">NIK</label>
+                        <input type="number" name="nik" class="form-control" id="inputNIK" placeholder="Example: 11111" style="height:36px;font-size:15px; width:100%">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputFirstName" class="form-label">First Name</label>
+                        <input type="text" name="firstName" class="form-control" id="inputFirstName" placeholder="Example: Jhon" style="height:36px;font-size:15px; width:100%">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputLastName" class="form-label">Last Name</label>
+                        <input type="text" name="lastName" class="form-control" id="inputLastName" placeholder="Example: Cena" style="height:36px;font-size:15px; width:100%">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputPhone" class="form-label">Phone</label>
+                        <input type="text" name="phone" class="form-control" id="inputPhone" placeholder="Example: 089xxx" style="height:36px;font-size:15px; width:100%">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputBirthDate" class="form-label">Birth Date</label>
+                        <input type="date" name="birthDate" class="form-control" id="inputBirthDate" style="height:36px;font-size:15px; width:100%">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputSalary" class="form-label">Salary</label>
+                        <input type="number" name="salary" class="form-control" id="inputSalary" placeholder="Example: 20xxxxx" style="height:36px;font-size:15px; width:100%">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputEmail" class="form-label">Email</label>
+                        <input type="text" name="email" class="form-control" id="inputEmail" placeholder="Example: jhon@example.com" style="height:36px;font-size:15px; width:100%">
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-group">
+                            <label for="pwd">Gender:</label>
+                            <select class="form-control" id="inputGender">
+                                <option value="none" selected disabled> Pilih Gender</option>
+                                <option value="0">Male</option>
+                                <option value="1">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success" style="float: right" id="btnSubmit">Submit</button>
+                    <button type="submit" class="btn btn-primary" style="float: right" id="btnEdit">Edit</button>
+                    <button type="reset" class="btn btn-secondary mr-1" style="float: right" data-bs-dismiss="modal">Close</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

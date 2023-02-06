@@ -1,4 +1,5 @@
-﻿using API.Models;
+﻿using API.Controllers;
+using API.Models;
 using API.Repositories.Data;
 using API.Repositories.Interface;
 using Microsoft.AspNetCore.Http;
@@ -19,6 +20,10 @@ public class BaseController<Repository, Entity, Key> : ControllerBase
         _repo = repo;
     }
 
+    public BaseController(EducationsController repo)
+    {
+    }
+
     [HttpGet]
     public ActionResult GetAll()
     {
@@ -37,7 +42,7 @@ public class BaseController<Repository, Entity, Key> : ControllerBase
     }
 
     [HttpGet]
-    [Route("{id}")]
+    [Route("{key}")]
     public ActionResult GetById(Key key)
     {
         try
